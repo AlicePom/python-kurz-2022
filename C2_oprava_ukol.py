@@ -17,5 +17,5 @@ else:
         print(f"Na skladě už zbyly jen tyto součástky: {sklad}.")
     else:
         print(f"Na skladě máme dostatečný počet Vámi požadovaného zboží.")
-        value = sklad[kod_soucastky] - pocet_kusu
-        print(f"Na skladě nyní zbývá pouze {value} ks součástky {kod_soucastky}.")
+        sklad[kod_soucastky] -= pocet_kusu
+        print(f"Na skladě nyní zbývá pouze {sklad[kod_soucastky]} ks součástky {kod_soucastky}.")
