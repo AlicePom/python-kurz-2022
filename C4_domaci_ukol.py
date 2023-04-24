@@ -15,7 +15,7 @@ if overeni(tel_cislo) == True:
     zprava = input("Zadejte prosím zprávu, kterou chcete odeslat: ")
     cena_za_1_SMS = 3
     def cena_zpravy(zprava):
-        delka = int(len(zprava))
+        delka = len(zprava)
         pocet_SMS = math.ceil(delka / 180)
         cena = cena_za_1_SMS * pocet_SMS
         return cena
