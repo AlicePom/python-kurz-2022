@@ -12,14 +12,16 @@ def overeni(tel_cislo):
         return False
 print(overeni(tel_cislo))
 
-if overeni(tel_cislo) == True:
-    zprava = input("Zadejte prosím zprávu, kterou chcete odeslat: ")
+
+def cena_zpravy(zprava):
+    delka = int(len(zprava))
     cena_za_1_SMS = 3
-    def cena_zpravy(zprava):
-        delka = int(len(zprava))
-        pocet_SMS = math.ceil(delka / 180)
-        cena = cena_za_1_SMS * pocet_SMS
-        return cena
+    pocet_SMS = math.ceil(delka / 180)
+    cena = cena_za_1_SMS * pocet_SMS
+    return cena
+
+if overeni(tel_cislo):
+    zprava = input("Zadejte prosím zprávu, kterou chcete odeslat: ")
     print(f"Cena za zprávu je {cena_zpravy(zprava)} Kč.")
 else:
     print("Číslo je zadané v nesprávném formátu.")
