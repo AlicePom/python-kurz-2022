@@ -8,5 +8,17 @@ teploty = [
     ["neděle", 0.4, 2.7, 1.3, -2.8]
 ]
 
-prum_teploty = {item[0]: f"{round(sum(item[1:]) / len(item[1:]), 1)}" for item in teploty}
+""" oprava bonusu: """
+
+prum_teploty = {item[0]: float(f"{round(sum(item[1:]) / len(item[1:]), 1)}") for item in teploty}
 print(prum_teploty)
+
+
+
+""" 
+původní nedokonalé řešení:
+
+prum_teploty = {item[0]: f"{round(sum(item[1:]) / len(item[1:]), 1)}" for item in teploty}
+print(prum_teploty) 
+
+"""
