@@ -17,7 +17,7 @@ class Auto:
     
     def vrat_auto(self, stav_tachometru_vraceni, pocet_dni_uzivani):
         self.stav_tachometru_vraceni = stav_tachometru_vraceni
-        self.pocet_dni_uzivani = pocet_dni_uzivani
+        # self.pocet_dni_uzivani = pocet_dni_uzivani
         self.volne = True
         """ 
         # Funkce mi nefunguje, viz níže line 51, neumím ji zavolat
@@ -54,12 +54,5 @@ if pocet_dni_uzivani < 7:
     print(f"Cena za 1 den vypůjčení je 400 Kč. Prosím, zaplaťte {pocet_dni_uzivani * 400} Kč.")
 if pocet_dni_uzivani >= 7:
     print(f"Cena za 1 den vypůjčení je 300 Kč. Prosím, zaplaťte {pocet_dni_uzivani * 300} Kč.") 
-
-
-
-
-
-
-
 
 
